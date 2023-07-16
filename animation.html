@@ -6,37 +6,32 @@
             margin: 0;
             overflow: hidden
         }
-        div {
-            width: 50px;
-            height: 200px;
+        .hoverable {
+            width: 100px;
+            height: 100px;
             background-color: red;
             position: absolute;
             left: 0;
             animation: moveright 8s linear infinite;
             animation-name: example;
+            animation-delay: 2s;
             animation-duration: 8s;
-        }
-        @keyframes example {
-            0% {background-color: red;}
-            25% {margin-left: 50%;}
-            100%{margin-right: 100% - 50%;}
-        }
-.hoverable {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    transition: all 2s;
-    transition-timing-function: ease;
-    animation-name: example;
-    animation-duration: 8s;
-    animation-iteration-count: 8s;
-    margin-bottom: 20px;
+            margin-bottom: 20px;
 }
-
+        @keyframes example {
+            0% {
+                left: 0;
+            }
+            25% {
+                left: 50%;
+            }
+            100%{
+                left: 100%;
+        }
+    }
     </style>
 </head>
 <body>
     <div class="hoverable"></div>
-
 </body>
 </html>
