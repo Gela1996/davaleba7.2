@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    overflow: hidden
+}
+.hoverable {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    animation: moveright 8s linear infinite;
+    animation-name: example;
+    animation-delay: 2s;
+    animation-duration: 8s;
+    margin-bottom: 20px;
+}
+@keyframes example {
+    0% {
+        left: 0;
+    }
+    25% {
+        left: 50%;
+    }
+    100%{
+        left: 100%;
+}
+}
